@@ -14,6 +14,14 @@ td {
     user-select: none;
 }
 
+td:hover {
+    filter: brightness(85%);
+}
+
+table {
+    box-shadow: 5px 5px 5px grey;
+}
+
 .off {
     background-color: white;
 }
