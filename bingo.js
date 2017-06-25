@@ -1,39 +1,43 @@
 bingoArray=[];
 spaces = [
-    "Neel pulls a completely avoidable trash pack",
+    "Non-tank pulls a completely avoidable trash pack",
     "Charlie wipes the raid by attacking Greg or Augusta's keyboard",
-    "Joe out-heals at least two of the healers",
+    "Tank out-heals at least two of the healers",
     "Katie discovers a new aspect of her abilities by reading a tooltip for the first time",
     "Kyle summons an Earth Elemental and gets yelled at",
-    "David immediately says 'Rate my transmog' upon being summoned",
+    "Someone immediately says 'Rate my transmog' upon being summoned",
     "Josh dives after a piece of gear with Leech",
     "Raid discovers that DPS 'cutoff' numbers are severely inflated",
     "Godawful puns begin going out and never ever stop",
     "10+ DPS apply to group finder when we post 'Healer Only'",
     "Joe uses a bunch of size-increasing buffs and mounts up",
     "Katie starts using 'Reflecting Prism' on the entire raid",
-    "Someone is drinking heavily",
+    "Multiple raid members are drinking heavily",
     "Pug DPS outdoes entire guild and leaves after one wipe",
     "Someone's computer/internet explodes but they are still on Discord",
     "Nobody uses the damn guild sign-up sheet on the calendar",
-    "20-minute fight is followed by the word 'SIMPLE!'",
+    "Long fight explanation is followed by the word 'SIMPLE!'",
     "Someone who is not participating in the raid decides to begin commentary in Discord",
     "Guild one-shots a boss and then wipes four times on trash immediately afterwards",
-    "Somebody shows up very late to raid and then gets mad when the raid is not moving fast enough",
-    "PUG has CD Macros",
-    "PUG has Interrupt Macros",
-    "PUG has a stupid name like Skilldan, Weedtree, Orcbob, etc",
+    "Somebody in the guild shows up late to the raid and then gets mad when the raid is not moving fast enough",
+    "Random PUG has CD Macros",
+    "Random PUG has Interrupt Macros",
+    "Random PUG has a stupid name like Skilldan, Weedtree, Orcbob, etc",
     "After fight gets explained, someone goes 'OH! So it's just like X from a prior xpac!'",
     "'That reminds me of a hilarious YouTube video! Let me link it in Discord!'",
     "Someone needs a basic function of the game's UI explained to them",
     "Someone goes AFK while fight is explained and subsequently wipes the raid",
     "PUG posts a damage recap after the fight to show off even though they are doing badly",
-    "Someone asks for 'Bloodlust' when they have the debuff",
-    "PUG claims to be expert at fight and has never downed it",
+    "Someone asks for 'Bloodlust' when they already have the debuff",
+    "Someone claims to be an expert at a fight and has never downed it",
     "Links a YouTube video explaining the boss fight in the in-game client",
     "Jake exists today",
     "'BRB sandwich' is said",
-    "Someone legitimately falls asleep"
+    "Someone legitimately falls asleep",
+    "ALL HAIL THE GOLDEN BANANA!",
+    "Someone falls into an avoidable pit and dies outside of a fight",
+    "Over 50 members join and leave the raid over the course of the night",
+    "PUG player starts talking shit about member of the guild they are running with"
 ]
 
 function makeBoard(){
@@ -71,6 +75,8 @@ function makeBoard(){
 
 makeBoard();
 console.log(bingoArray);
+
+
 
 function clickSpace(id){
     var thisSpace = document.getElementById(id);
