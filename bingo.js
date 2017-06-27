@@ -37,7 +37,30 @@ spaces = [
     "ALL HAIL THE GOLDEN BANANA!",
     "Someone falls into an avoidable pit and dies outside of a fight",
     "Over 50 members join and leave the raid over the course of the night",
-    "PUG player starts talking shit about member of the guild they are running with"
+    "PUG player starts talking shit about member of the guild they are running with",
+    "PUG decides they are the new raid leader",
+    "Demon Hunter crashes into a cliff",
+    "Jokes in guild chat bleed into Discord and confuse the shit out of PUGs",
+    "Somebody complains about somebody elses spec choices",
+    "Wipe happens and then, after a short pause, someone asks 'What the fuck happened?'",
+    "PUG sees there is no warlock and leaves due to lack of summons",
+    "Dick waving contest regarding prior accomplishments",
+    "Somebody complains about not using elixirs and/or food on a pull that doesn't need it",
+    "Lust goes out at the wrong time",
+    "At least three people manage to see completely different things happening on their screens",
+    "PUG complains that a guild member is being carried",
+    "Someone begs for gear that cannot be traded",
+    "Someone says they will trade a piece of gear only for it to be soulbound",
+    "Someone complains that an uninterruptible mechanic is not being interrupted",
+    "One healer has 75% or more of the dispels",
+    "One player has 75% or more of the interrupts",
+    "Two people try to 'save the raid' and only manage sabotage each other",
+    "Someone is obviously gunning for a bingo space",
+    "Lower priority DPS asks for or demands a battle rez over higher priority member",
+    "PUG is convinced that their cheese strategy would save the day",
+    "DPS diva threatens to leave if you don't do something for them",
+    "Someone is running that addon that tells you who doesn't have flask/food buffs in chat",
+    "Guild pines for missing raid member after a wipe"
 ]
 
 function makeBoard(){
