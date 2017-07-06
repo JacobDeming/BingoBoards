@@ -48,7 +48,7 @@ spaces = [
     "Somebody complains about not using elixirs and/or food on a pull that doesn't need it",
     "Lust goes out at the wrong time",
     "At least three people manage to see completely different things happening on their screens",
-    "PUG complains that a guild member is being carried",
+    "Raid member complains that another member of the raid is being carried but there has been no problem",
     "Someone begs for gear that cannot be traded",
     "Someone says they will trade a piece of gear only for it to be soulbound",
     "Someone complains that an uninterruptible mechanic is not being interrupted",
@@ -60,61 +60,85 @@ spaces = [
     "PUG is convinced that their cheese strategy would save the day",
     "DPS diva threatens to leave if you don't do something for them",
     "Someone is running that addon that tells you who doesn't have flask/food buffs in chat",
-    "Guild pines for missing raid member after a wipe"
+    "Guild pines for missing raid member after a wipe",
+    "World of Whorecraft: Illidan's Pillar of Eternity"
 ]
 
-function makeBoard(){
-    for(var i=0; i<25; i++){
-        var space = spaces[Math.floor(Math.random()*spaces.length)];
-        checkSpace(space);
-        var index = spaces.indexOf(space);
-        if(index > -1){
-            spaces.splice(index,1);
-        }
-        bingoArray.push(space);
+$bingoBoard = document.querySelector("#BingoCard");
+$rowOne = document.querySelector("#Row1");
+$rowTwo = document.querySelector("#Row2");
+$rowThree = document.querySelector("#Row3");
+$rowFour = document.querySelector("#Row4");
+$rowFive = document.querySelector("#Row5");
+
+setBoard();
+
+$bingoBoard.addEventListener("click", function(event){
+  console.log("Clicked " + event.target.className);
+  if(event.target.className == "on") {
+    event.target.className = "off";
+  }
+  else if(event.target.className == "off") {
+    event.target.className = "on";
+  }
+})
+
+function setBoard(){
+  for(var i=0; i<25; i++) {
+    var space = spaces[Math.floor(Math.random() * spaces.length)];
+    checkSpace(space);
+    var index = spaces.indexOf(space);
+    if(index > -1) {
+      spaces.splice(index,1);
     }
-    for(var i=0; i<25; i++) {
-        if(i<5){
-            document.getElementById('Row1').innerHTML += ("<td id='BingoSpace"+ i + "' onClick='clickSpace(this.id)' class= 'off'>" + bingoArray[i] + "</td>");
-        }
-        if(i>=5 && i<10){
-            document.getElementById('Row2').innerHTML += ("<td id='BingoSpace"+ i + "' onClick='clickSpace(this.id)' class= 'off'>" + bingoArray[i] + "</td>");
-        }
-        if(i>=10 && i<15){
-            if(i == 12){
-                document.getElementById('Row3').innerHTML += ("<td id='BingoSpace"+ i + "' onClick='clickSpace(this.id)' class= 'on'>FREE SPACE</td>");
-            } else {
-                document.getElementById('Row3').innerHTML += ("<td id='BingoSpace"+ i + "' onClick='clickSpace(this.id)' class= 'off'>" + bingoArray[i] + "</td>");
-            }
-        }
-        if(i>=15 && i<20){
-            document.getElementById('Row4').innerHTML += ("<td id='BingoSpace"+ i + "' onClick='clickSpace(this.id)' class= 'off'>" + bingoArray[i] + "</td>");
-        }
-        if(i>=20 && i<25){
-            document.getElementById('Row5').innerHTML += ("<td id='BingoSpace"+ i + "' onClick='clickSpace(this.id)' class= 'off'>" + bingoArray[i] + "</td>");
-        }
+    bingoArray.push(space);
+  }
+  for(var i=0; i<25; i++){
+    if(i < 5){
+      var $td = document.createElement("td");
+      $td.className = "off";
+      $td.innerText = bingoArray[i];
+      $rowOne.appendChild($td);
     }
-}
-
-makeBoard();
-console.log(bingoArray);
-
-
-
-function clickSpace(id){
-    var thisSpace = document.getElementById(id);
-    if(thisSpace.className == "off"){
-        thisSpace.className = "on";
-    } else {
-        thisSpace.className = "off";
+    if(i>=5 && i<10){
+      var $td = document.createElement("td");
+      $td.className = "off";
+      $td.innerText = bingoArray[i];
+      $rowTwo.appendChild($td);
     }
+    if(i>=10 && i<15){
+      if(i==12){
+        var $td = document.createElement("td");
+        $td.className = "on";
+        $td.innerText = "FREE SPACE";
+        $rowThree.appendChild($td);
+      } else {
+        var $td = document.createElement("td");
+        $td.className = "off";
+        $td.innerText = bingoArray[i];
+        $rowThree.appendChild($td);
+      }
+    }
+    if(i>=15 && i<20){
+      var $td = document.createElement("td");
+      $td.className = "off";
+      $td.innerText = bingoArray[i];
+      $rowFour.appendChild($td);
+    }
+    if(i>=20 && i<25){
+      var $td = document.createElement("td");
+      $td.className = "off";
+      $td.innerText = bingoArray[i];
+      $rowFive.appendChild($td);
+    }
+  }
 }
 
 function checkSpace(space){
-    for(var j=0; j<bingoArray.length; j++){
-        if(space == bingoArray[j]){
-            var space = spaces[Math.floor(Math.random()*spaces.length)];
-            checkSpace(space);
-        }
+  for(var j=0; j<bingoArray.length; j++){
+    if(space == bingoArray[j]){
+      var space = spaces[Math.floor(Math.random()*spaces.length)];
+      checkSpace(space);
     }
+  }
 }
