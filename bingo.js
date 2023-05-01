@@ -14,7 +14,7 @@ spaces = [
   "Nancy's Dad is not okay with this",
   "Language is somehow a puzzle",
   "Dress up minigame",
-  "Nancy has a friend of a friend of a friend of a friend...",
+  "Nancy Drew does harm to an obviously innocent individual",
   "Supernatural thing turns out to be Scooby Doo villainy",
   "Grue and Avery actively hate a puzzle or minigame",
   "Avery and Grue come up with new Nancy Drew lore",
@@ -44,6 +44,13 @@ spaces = [
   "Nancy dies if you do not complete a puzzles",
   "Random garbage is placed in Nancy's pockets",
   "Nancy dies or is hurt in brutal fashion"
+];
+
+freeSpaces = [
+  '"Dumb. Dumb. Stupid. Dumb"',
+  "Nancy Drew should be in jail",
+  "People are way too accepting of Nancy's bullshit",
+  "Minor concern is turned into a big problem"
 ];
 
 $bingoBoard = document.querySelector("#BingoCard");
@@ -92,7 +99,7 @@ function setBoard(){
       if(i==12){
         var $td = document.createElement("td");
         $td.className = "on";
-        $td.innerText = "FREE SPACE";
+        $td.innerText = "FREE SPACE:\n" + freeSpaces[Math.floor(Math.random() * freeSpaces.length)];;
         $rowThree.appendChild($td);
       } else {
         var $td = document.createElement("td");
