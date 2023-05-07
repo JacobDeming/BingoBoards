@@ -46,14 +46,15 @@ spaces = [
   "Puzzle that should have a time limit simply doesn't",
   "Random garbage is placed in Nancy's pockets",
   "A character is sick of Nancy's bullshit",
-  "Game includes a useless side activity"
+  "Game includes a useless side activity",
+  "Game references a style of martial arts, real or otherwise"
 ];
 
 freeSpaces = [
   '"Dumb. Dumb. Stupid. Dumb"',
   "Nancy Drew should be in jail",
   "People are way too accepting of Nancy's bullshit",
-  "Minor concern is turned into a big problem"
+  "Minor concern is turned into a big problem",
 ];
 
 $bingoBoard = document.querySelector("#BingoCard");
