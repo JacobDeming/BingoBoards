@@ -32,7 +32,7 @@ spaces = [
   "Inexplicable secret door, cubby, or safe",
   "Puzzle involves live animals",
   "Nancy Drew breaks into something or damages property",
-  "Nancy Drew actually suffers the consequences of her actions",
+  "Nancy Drew suffers the consequences of her actions",
   "Bess or George are involved",
   "Nancy Drew straight up steals something",
   "Nancy Drew admonishes a character for committing a crime she has previously committed",
@@ -45,7 +45,8 @@ spaces = [
   "Puzzle would be easy if not for the time limit",
   "Puzzle that should have a time limit simply doesn't",
   "Random garbage is placed in Nancy's pockets",
-  "A character is sick of Nancy's bullshit"
+  "A character is sick of Nancy's bullshit",
+  "Game includes a useless side activity"
 ];
 
 freeSpaces = [
